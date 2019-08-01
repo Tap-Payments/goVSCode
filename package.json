@@ -1,0 +1,78 @@
+{
+  "name": "supreme-gettter",
+  "displayName": "Supreme Getter",
+  "description": "Get-packages for all yaml files in the directory.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.30.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.supremeGetter"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "supreme-getter-explorer",
+          "title": "Supreme Getter",
+          "icon": "images/get-all.svg"
+        }
+      ]
+    },
+    "views": {
+      "supreme-getter-explorer": [
+        {
+          "id": "nodeDependencies",
+          "name": "Node Dependencies"
+        }
+      ],
+      "explorer": [
+        {
+          "id": "jsonOutline",
+          "name": "Json Outline",
+          "when": "jsonOutlineEnabled"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "extension.supremeGetter",
+          "group": "navigation"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "extension.supremeGetter",
+        "title": "Supreme Getter"
+      },
+      {
+        "command": "extension.supremeGetter",
+        "title": "Get All",
+        "icon": {
+          "light": "images/get-all.svg",
+          "dark": "images/get-all.svg"
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^10.12.21",
+    "@types/vscode": "^1.30.0",
+    "eslint": "^5.13.0",
+    "glob": "^7.1.4",
+    "mocha": "^6.1.4",
+    "typescript": "^3.3.1",
+    "vscode-test": "^1.0.2"
+  }
+}
