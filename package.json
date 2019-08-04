@@ -19,15 +19,19 @@
         {
           "id": "supreme-getter-explorer",
           "title": "Supreme Getter",
-          "icon": "images/get-all.svg"
+          "icon": "images/tap.svg"
         }
       ]
     },
     "views": {
       "supreme-getter-explorer": [
         {
-          "id": "nodeDependencies",
-          "name": "Node Dependencies"
+          "id": "commands",
+          "name": "Supreme Getter"
+        },
+        {
+          "id": "commands2",
+          "name": "Others"
         }
       ],
       "explorer": [
@@ -55,8 +59,8 @@
         "command": "extension.supremeGetter",
         "title": "Get All",
         "icon": {
-          "light": "images/get-all.svg",
-          "dark": "images/get-all.svg"
+          "light": "images/tap-white.svg",
+          "dark": "images/tap-black.svg"
         }
       }
     ]
