@@ -1,8 +1,10 @@
 {
-  "name": "supreme-gettter",
-  "displayName": "Supreme Getter",
-  "description": "Get-packages for all yaml files in the directory.",
-  "version": "0.0.1",
+  "name": "govscode-flutter-dart",
+  "displayName": "goVSCode Flutter & Dart",
+  "description": "Dedicated to making our lives easier. Used by amazing Tap developers.🧞‍",
+  "version": "0.0.2",
+  "publisher": "TapPayments",
+  "repository": "https://github.com/Tap-Payments/goVSCODE",
   "engines": {
     "vscode": "^1.30.0"
   },
