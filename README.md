@@ -7,8 +7,8 @@ Done by Tap developers to serve Tap projects.
 For now, it's just to `Get Packages` for all yaml files in the project directory.
 Eventually, it will have many snippets.
 
-## Honor List
+## Honor List 🎖️
 
-| <a href="https://media.giphy.com/media/1TJB4TPjtaEJq/giphy.gif"><img src="./images/contributors/hansom_Khaled.png" width="400"></a> | <a href=""><img alt="" src="" width=""></a> | <a href=""><img alt="" src="" width=""></a> | <a href=""><img alt="" src="" width=""></a> | <a href=""><img alt="" src="" width=""></a> |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
-| [Khaled](https://media.giphy.com/media/1TJB4TPjtaEJq/giphy.gif)                                                                     | [Contributor 2]()                           | [Contributor 3]()                           | [Contributor 4]()                           | [Contributor 5]()                           |
+| ![Khaled](https://raw.githubusercontent.com/Tap-Payments/goVSCode/master/images/contributors/hansom_Khaled.png?token=AJYWWRMSAJC2IRCLIMELM4K5KHBDO) |                   |                   |                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- | ----------------- | ----------------- |
+| [Khaled](https://media.giphy.com/media/1TJB4TPjtaEJq/giphy.gif)                                                                                     | [Contributor 2]() | [Contributor 3]() | [Contributor 4]() |

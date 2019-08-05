@@ -2,12 +2,13 @@
   "name": "govscode-flutter-dart",
   "displayName": "goVSCode Flutter & Dart",
   "description": "Dedicated to making our lives easier. Used by amazing Tap developers.🧞‍",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "TapPayments",
   "repository": "https://github.com/Tap-Payments/goVSCODE",
   "engines": {
     "vscode": "^1.30.0"
   },
+  "icon": "images/tap.png",
   "categories": [
     "Other"
   ],
