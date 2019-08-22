@@ -2,7 +2,7 @@
   "name": "govscode-flutter-dart",
   "displayName": "goVSCode Flutter & Dart",
   "description": "Dedicated to making our lives easier. Used by amazing Tap developers.🧞‍",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "TapPayments",
   "repository": "https://github.com/Tap-Payments/goVSCODE",
   "engines": {
@@ -20,28 +20,25 @@
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "supreme-getter-explorer",
-          "title": "Supreme Getter",
+          "id": "main-explorer",
+          "title": "Tap Universe",
           "icon": "images/tap.svg"
         }
       ]
     },
     "views": {
-      "supreme-getter-explorer": [
+      "main-explorer": [
         {
           "id": "commands",
-          "name": "Supreme Getter"
+          "name": "Control Tab"
         },
         {
           "id": "commands2",
           "name": "Others"
-        }
-      ],
-      "explorer": [
+        },
         {
-          "id": "jsonOutline",
-          "name": "Json Outline",
-          "when": "jsonOutlineEnabled"
+          "id": "commands3",
+          "name": "Others"
         }
       ]
     },
@@ -49,21 +46,40 @@
       "view/title": [
         {
           "command": "extension.supremeGetter",
-          "group": "navigation"
+          "group": "commands"
+        },
+        {
+          "command": "extension.configBuilder",
+          "group": "commands"
         }
       ]
     },
     "commands": [
       {
         "command": "extension.supremeGetter",
-        "title": "Supreme Getter"
+        "title": "Get All",
+        "category": "test",
+        "icon": {
+          "dark": "images/icons/dark/icon-tap.svg",
+          "light": "images/icons/light/icon-tap.svg"
+        }
       },
       {
-        "command": "extension.supremeGetter",
-        "title": "Get All",
+        "command": "extension.configBuilder",
+        "title": "Refresh",
+        "category": "test",
         "icon": {
-          "light": "images/tap-white.svg",
-          "dark": "images/tap-black.svg"
+          "dark": "images/icons/dark/icon-refresh.svg",
+          "light": "images/icons/light/icon-refresh.svg"
+        }
+      },
+      {
+        "command": "extension.configBuilder1",
+        "title": "Refresh",
+        "category": "test",
+        "icon": {
+          "dark": "images/icons/dark/icon-refresh.svg",
+          "light": "images/icons/light/icon-refresh.svg"
         }
       }
     ]

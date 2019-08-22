@@ -17,14 +17,19 @@ function activate(context) {
       vscode.window.showInformationMessage(
         "Searching for pubspec.yaml files...🧐"
       );
-
+      const folderName = vscode.workspace.workspaceFolders[0].name;
       vscode.workspace.findFiles("**/*pubspec.yaml").then(files => {
-        if (files.length > 0 && vscode.workspace.workspaceFolders[0]) {
-          const folderName = vscode.workspace.workspaceFolders[0].name;
+        const filteredFiles = files.filter(
+          file =>
+            //  junk files contains 'ios/.symlink'
+            !file.path.split(`${folderName}/`)[1].includes(".symlinks")
+        );
+
+        if (filteredFiles.length > 0 && vscode.workspace.workspaceFolders[0]) {
           vscode.window.showWarningMessage(
-            `Getting the packages for ${files.length}  files...🤓`
+            `Getting the packages for ${filteredFiles.length}  files...🤓`
           );
-          files.forEach(file => {
+          filteredFiles.forEach(file => {
             let filePath = file.path.split(`${folderName}/`)[1];
 
             asyncGetPackage(file).then(result => {
@@ -43,9 +48,42 @@ function activate(context) {
       });
     }
   );
+  // context.subscriptions.push(disposable);
+
+  // let disposable2 = vscode.commands.registerCommand(
+  //   "extension.configBuilder",
+  //   function() {
+  //     // The code you place here will be executed every time your command is executed
+  //     // Display a message box to the user
+  //     vscode.window.showInformationMessage(
+  //       "Searching for main.dart files...🧐"
+  //     );
+
+  //     vscode.workspace.findFiles("**/*main.dart").then(files => {
+  //       if (files.length > 0 && vscode.workspace.workspaceFolders[0]) {
+  //         const folderName = vscode.workspace.workspaceFolders[0].name;
+  //         vscode.window.showWarningMessage(
+  //           `Getting the packages for ${files.length}  files...🤓`
+  //         );
+  //         files.forEach(file => {
+  //           let filePath = file.path.split(`${folderName}/`)[1];
+  //           // junk files contains 'ios/.symlink'
+  //           if (!filePath.includes(".symlink")) {
+  //             console.log(filePath);
+  //           }
+  //         });
+  //       } else {
+  //         vscode.window.showErrorMessage(
+  //           "couldn't find any pubspec.yaml file!🤔"
+  //         );
+  //       }
+  //     });
+  //   }
+  // );
 
   context.subscriptions.push(disposable);
 }
+
 exports.activate = activate;
 
 // this method is called when your extension is deactivated
